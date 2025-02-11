@@ -27,7 +27,7 @@ public class Even {
 
         while (correctAnswers < 3) {
             int number = Engine.random(100);
-            Engine.game(String.valueOf(number));
+            Engine.userInteraction(String.valueOf(number));
             if ((!answer.equals("no")) & (!answer.equals("yes"))) {
                 throw new Exception();
             }
