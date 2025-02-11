@@ -14,7 +14,7 @@ public class Engine {
      */
     public static String answer;
 
-    public static void game(String number) throws Exception {
+    public static void userInteraction(String number) {
         /*
         User interaction
          */
@@ -22,6 +22,26 @@ public class Engine {
         System.out.print("Your answer: ");
         Scanner scan1 = new Scanner(System.in);
         answer = scan1.next();
+    }
+
+    public static boolean generalLogic(String number, int number1) {
+
+        userInteraction(number);
+
+        int answers = Integer.parseInt(answer);
+        String userName = Cli.nameUser;
+
+        if (number1 == answers) {
+            System.out.println("Correct!");
+            return true;
+
+        } else {
+            System.out.printf("'%s' is wrong answer ;). "
+                            + "Correct answer was '%d'.\nLet`s try again, %s!",
+                    answer, number1, userName);
+            return false;
+
+        }
     }
 
     public static int random(int maxRandom) {
