@@ -3,9 +3,12 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/adac22876bfb367baf81/maintainability)](https://codeclimate.com/github/Met-s/java-project-61/maintainability)
 
 
-Пример запуска игры Even.parityCheck: https://asciinema.org/a/1RDLV1AwL91Vgj8kuNw6qca1d
+Пример запуска игры Even https://asciinema.org/a/1RDLV1AwL91Vgj8kuNw6qca1d
 
 [![asciicast](https://asciinema.org/a/1RDLV1AwL91Vgj8kuNw6qca1d.svg)](https://asciinema.org/a/1RDLV1AwL91Vgj8kuNw6qca1d)
 
-Пример запуска игры Calc.calculate: https://asciinema.org/a/5z8l5Iyvz2EdgWOVBqX78RCyw
+Пример запуска игры Calc: https://asciinema.org/a/5z8l5Iyvz2EdgWOVBqX78RCyw
 [![asciicast](https://asciinema.org/a/5z8l5Iyvz2EdgWOVBqX78RCyw.svg)](https://asciinema.org/a/5z8l5Iyvz2EdgWOVBqX78RCyw)
+
+Пример запуска игры GCD: https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs
+[![asciicast](https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs.svg)](https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs)
