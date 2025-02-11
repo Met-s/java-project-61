@@ -10,44 +10,34 @@ public class Calc {
      */
     public static void calculate() throws Exception {
 
-        int result1 = 0;
+        int result = 0;
         int correctAnswers = 0;
         String[] operators = {"+", "-", "*"};
-
         Cli.greeting();
-        String userName = Cli.nameUser;
         System.out.println("What is the result of the expression?");
 
         while (correctAnswers < 3) {
             int number1 = Engine.random(20) + 1;
             int number2 = Engine.random(20) + 1;
             int i = Engine.random(3);
-            String result = number1 + " " + operators[i] + " " + number2;
+            String outputResult = number1 + " " + operators[i] + " " + number2;
 
             switch (i) {
                 case 0 :
-                    result1 = (number1 + number2);
+                    result = (number1 + number2);
                     break;
-
                 case 1 :
-                    result1 = (number1 - number2);
+                    result = (number1 - number2);
                     break;
                 case 2 :
-                    result1 = (number1 * number2);
+                    result = (number1 * number2);
                     break;
                 default :
             }
 
-            Engine.game(result);
-            int answer = Integer.parseInt(Engine.answer);
-
-            if (result1 == answer) {
-                System.out.println("Correct!");
+            if (Engine.generalLogic(outputResult, result)) {
                 correctAnswers++;
             } else {
-                System.out.println("'" + answer + "'" + "is wrong answer"
-                        + " ;(. Correct answer was " + "'" + result1 + "'"
-                        +  ".\nLet`s try again, " + userName + "!");
                 break;
             }
             Engine.finall(correctAnswers);
