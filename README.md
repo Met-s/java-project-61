@@ -12,3 +12,6 @@
 
 Пример запуска игры GCD: https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs
 [![asciicast](https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs.svg)](https://asciinema.org/a/VHoW5P9TXo9a5bWEAEjiO5Yxs)
+
+Пример запуска игры Arithmetic progression: https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI
+[![asciicast](https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI.svg)](https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI)
