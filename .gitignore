@@ -11,5 +11,5 @@
 /.gradle/
 /app/.gradle/
 /app/build/
-/app/config/
+
 /app/settings.gradle.kts
