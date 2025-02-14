@@ -6,6 +6,7 @@ import hexlet.code.games.Arprogression;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
+import hexlet.code.games.PrimeN;
 
 
 public class App {
@@ -16,13 +17,14 @@ public class App {
                 + "3 - Game Calc\n"
                 + "4 - Game GCD\n"
                 + "5 - Arithmetic progression\n"
+                + "6 - Prime number\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
 
         Scanner choice = new Scanner(System.in);
         try {
             int number = choice.nextInt();
-            if (5 < number || number < 0) {
+            if (6 < number || number < 0) {
                 throw new Exception();
             }
             switch (number) {
@@ -44,6 +46,8 @@ public class App {
                 case 5:
                     Arprogression.progression();
                     break;
+                case 6:
+                    PrimeN.primeNumber();
                 default:
             }
         } catch (Exception e) {
