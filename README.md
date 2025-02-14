@@ -15,3 +15,6 @@
 
 Пример запуска игры Arithmetic progression: https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI
 [![asciicast](https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI.svg)](https://asciinema.org/a/KNTeMVYjOnR3FuUD1XbO324VI)
+
+Пример запуска игры Prime number: https://asciinema.org/a/xt99JmikbXakoAcsC3Sf3yspE
+[![asciicast](https://asciinema.org/a/xt99JmikbXakoAcsC3Sf3yspE.svg)](https://asciinema.org/a/xt99JmikbXakoAcsC3Sf3yspE)
