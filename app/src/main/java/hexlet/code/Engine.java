@@ -44,6 +44,40 @@ public class Engine {
         }
     }
 
+
+    public static boolean game(String result) {
+
+        if (result.equals("yes")) {
+            if (answer.equals("yes")) {
+                System.out.println("Correct!");
+                return true;
+
+            } else {
+                System.out.println("'no' is wrong answer ;(. Correct "
+                        + "answer was 'yes'.\nLet's try again, "
+                        + nameUser + "!");
+                return false;
+
+            }
+        }
+        if (result.equals("no")) {
+            if (answer.equals("no")) {
+                System.out.println("Correct!");
+                return true;
+
+            } else {
+                System.out.println("'yes' is wrong answer ;(. Correct"
+                        + " answer was 'no'.\nLet's try again, "
+                        + nameUser + "!");
+                return false;
+
+            }
+        }
+        return false;
+    }
+
+
+
     public static int random(int maxRandom) {
         /*
         Pseudo random number from 0 to input parameter
