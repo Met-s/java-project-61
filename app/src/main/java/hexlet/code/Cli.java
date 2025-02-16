@@ -1,5 +1,4 @@
 package hexlet.code;
-import java.io.IOException;
 import java.util.Scanner;
 
 

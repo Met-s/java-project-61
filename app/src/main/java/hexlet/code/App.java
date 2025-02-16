@@ -10,6 +10,10 @@ import hexlet.code.games.PrimeN;
 
 public class App {
     public static void main(String[] args) {
+
+        String[] options = {"Exit", "Greet", "Even", "Calc", "GCD",
+                            "Progression", "PrimeN"};
+
         System.out.print("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
                 + "2 - Game Even\n"
@@ -26,14 +30,14 @@ public class App {
             if (QUANTITY_GAME < number || number < 0) {
                 throw new Exception();
             }
-            switch (number) {
-                case 0 -> System.out.println("Goodbye!");
-                case 1 -> Cli.greeting();
-                case 2 -> Even.parityCheck();
-                case 3 -> Calc.calculate();
-                case 4 -> Gcd.divisor();
-                case 5 -> Arprogression.progression();
-                case 6 -> PrimeN.primeNumber();
+            switch (options[number]) {
+                case "Exit" -> System.out.println("Goodbye!");
+                case "Greet" -> Cli.greeting();
+                case "Even" -> Even.parityCheck();
+                case "Calc" -> Calc.calculate();
+                case "GCD" -> Gcd.divisor();
+                case "Progression" -> Arprogression.progression();
+                case "PrimeN" -> PrimeN.primeNumber();
                 default -> System.out.println("Invalid number");
             }
         } catch (Exception e) {
