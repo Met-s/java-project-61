@@ -1,5 +1,8 @@
 package hexlet.code.games;
-import static hexlet.code.MyValues.*;
+import static hexlet.code.MyValues.CORRECT_ANSWERS;
+import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
+import static hexlet.code.MyValues.MAX_PROGRESSION_VALUE;
+import static hexlet.code.MyValues.MIN_PROGRESSION_VALUE;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.ArrayUtils;
@@ -15,7 +18,7 @@ public class Arprogression {
 
         while (correctAnswer < CORRECT_ANSWERS) {
             int number = Engine.random(MAX_RANDOM_NUMBER) + 1;
-            int progressionValue = Engine.random(MIN_PROGRESSION_VALUE) + 1;
+            int progressionValue = Engine.random(MAX_PROGRESSION_VALUE) + 1;
             String[] numbers = {};
 
             int i = 0;

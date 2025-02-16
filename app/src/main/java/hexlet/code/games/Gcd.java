@@ -1,5 +1,6 @@
 package hexlet.code.games;
-import static hexlet.code.MyValues.*;
+import static hexlet.code.MyValues.CORRECT_ANSWERS;
+import static hexlet.code.MyValues.MAX_RANDOM_NUMBER_GCD;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 

@@ -27,27 +27,14 @@ public class App {
                 throw new Exception();
             }
             switch (number) {
-                case 0:
-                    System.out.println("Goodbye!");
-                    break;
-                case 1:
-                    Cli.greeting();
-                    break;
-                case 2:
-                    Even.parityCheck();
-                    break;
-                case 3:
-                    Calc.calculate();
-                    break;
-                case 4:
-                    Gcd.divisor();
-                    break;
-                case 5:
-                    Arprogression.progression();
-                    break;
-                case 6:
-                    PrimeN.primeNumber();
-                default:
+                case 0 -> System.out.println("Goodbye!");
+                case 1 -> Cli.greeting();
+                case 2 -> Even.parityCheck();
+                case 3 -> Calc.calculate();
+                case 4 -> Gcd.divisor();
+                case 5 -> Arprogression.progression();
+                case 6 -> PrimeN.primeNumber();
+                default -> System.out.println("Invalid number");
             }
         } catch (Exception e) {
             System.out.println(("Incorrect input!"));

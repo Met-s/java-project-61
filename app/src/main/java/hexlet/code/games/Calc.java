@@ -1,7 +1,10 @@
 package hexlet.code.games;
-
+import static hexlet.code.MyValues.CORRECT_ANSWERS;
+import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
+import static hexlet.code.MyValues.MAX_RANDOM_OPERATORS;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+
 
 public class Calc {
     /**
@@ -16,10 +19,10 @@ public class Calc {
         Cli.greeting();
         System.out.println("What is the result of the expression?");
 
-        while (correctAnswers < 3) {
-            int number1 = Engine.random(20) + 1;
-            int number2 = Engine.random(20) + 1;
-            int i = Engine.random(3);
+        while (correctAnswers < CORRECT_ANSWERS) {
+            int number1 = Engine.random(MAX_RANDOM_NUMBER) + 1;
+            int number2 = Engine.random(MAX_RANDOM_NUMBER) + 1;
+            int i = Engine.random(MAX_RANDOM_OPERATORS);
             String outputResult = number1 + " " + operators[i] + " " + number2;
 
             switch (i) {

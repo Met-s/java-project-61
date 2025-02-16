@@ -1,4 +1,5 @@
 package hexlet.code;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -16,7 +17,7 @@ public class Cli {
         System.out.println("Hello, " + nameUser + "!");
     }
 
-    public String getNameUser() {
+    public static String getNameUser() {
         return nameUser;
     }
 }

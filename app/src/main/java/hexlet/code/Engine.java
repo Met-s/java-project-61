@@ -25,8 +25,8 @@ public class Engine {
 
     public static boolean generalLogic(String number, int number1) {
 
-        Cli nameUser = new Cli();
-        String userName = nameUser.getNameUser();
+
+        String userName = Cli.getNameUser();
 
         userInteraction(number);
 
@@ -48,8 +48,8 @@ public class Engine {
 
     public static boolean game(String result) throws Exception {
 
-        Cli nameUser1 = new Cli();
-        String nameUser = nameUser1.getNameUser();
+
+        String nameUser = Cli.getNameUser();
 
         if ((!answer.equals("no")) & (!answer.equals("yes"))) {
             throw new Exception();
@@ -95,8 +95,8 @@ public class Engine {
         /*
         Displays the final message about successful completion of the game
          */
-        Cli nameUser1 = new Cli();
-        String nameUser = nameUser1.getNameUser();
+
+        String nameUser = Cli.getNameUser();
 
         if (correctAnswers == CORRECT_ANSWERS) {
             System.out.println("Congratulations, " + nameUser + "!");
