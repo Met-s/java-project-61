@@ -1,8 +1,7 @@
 package hexlet.code;
-
+import static hexlet.code.MyValues.CORRECT_ANSWERS;
 import java.util.Random;
 import java.util.Scanner;
-import static hexlet.code.Cli.nameUser;
 
 
 public class Engine {
@@ -12,7 +11,7 @@ public class Engine {
      * Pseudo random number from 0 to input parameter
      * Displays the final message about successful completion of the game
      */
-    public static String answer;
+    private static String answer;
 
     public static void userInteraction(String number) {
         /*
@@ -26,10 +25,12 @@ public class Engine {
 
     public static boolean generalLogic(String number, int number1) {
 
+        Cli nameUser = new Cli();
+        String userName = nameUser.getNameUser();
+
         userInteraction(number);
 
         int answers = Integer.parseInt(answer);
-        String userName = Cli.nameUser;
 
         if (number1 == answers) {
             System.out.println("Correct!");
@@ -45,7 +46,14 @@ public class Engine {
     }
 
 
-    public static boolean game(String result) {
+    public static boolean game(String result) throws Exception {
+
+        Cli nameUser1 = new Cli();
+        String nameUser = nameUser1.getNameUser();
+
+        if ((!answer.equals("no")) & (!answer.equals("yes"))) {
+            throw new Exception();
+        }
 
         if (result.equals("yes")) {
             if (answer.equals("yes")) {
@@ -70,13 +78,10 @@ public class Engine {
                         + " answer was 'no'.\nLet's try again, "
                         + nameUser + "!");
                 return false;
-
             }
         }
         return false;
     }
-
-
 
     public static int random(int maxRandom) {
         /*
@@ -90,7 +95,10 @@ public class Engine {
         /*
         Displays the final message about successful completion of the game
          */
-        if (correctAnswers == 3) {
+        Cli nameUser1 = new Cli();
+        String nameUser = nameUser1.getNameUser();
+
+        if (correctAnswers == CORRECT_ANSWERS) {
             System.out.println("Congratulations, " + nameUser + "!");
         }
     }

@@ -1,8 +1,7 @@
 package hexlet.code.games;
-
+import static hexlet.code.MyValues.*;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
-import static hexlet.code.Engine.answer;
 
 
 public class Even {
@@ -21,18 +20,15 @@ public class Even {
         int correctAnswers = 0;
 
         Cli.greeting();
-        String nameUser = Cli.nameUser;
+
         System.out.println("Answer 'yes' if the number is even, "
                 + "otherwise answer 'no'.");
 
-        while (correctAnswers < 3) {
-            int number = Engine.random(100);
+        while (correctAnswers < CORRECT_ANSWERS) {
+            int number = Engine.random(MAX_RANDOM_NUMBER);
 
             Engine.userInteraction(String.valueOf(number));
 
-            if ((!answer.equals("no")) & (!answer.equals("yes"))) {
-                throw new Exception();
-            }
             String result = (number % 2 == 0) ? "yes" : "no";
             if (Engine.game(result)) {
                 correctAnswers++;

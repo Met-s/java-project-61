@@ -1,7 +1,6 @@
 package hexlet.code;
-
+import static hexlet.code.MyValues.QUANTITY_GAME;
 import java.util.Scanner;
-
 import hexlet.code.games.Arprogression;
 import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
@@ -24,7 +23,7 @@ public class App {
         Scanner choice = new Scanner(System.in);
         try {
             int number = choice.nextInt();
-            if (6 < number || number < 0) {
+            if (QUANTITY_GAME < number || number < 0) {
                 throw new Exception();
             }
             switch (number) {

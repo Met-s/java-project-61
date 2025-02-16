@@ -6,7 +6,7 @@ public class Cli {
     /**
      * Getting to know the user.
      */
-    public static String nameUser;
+    private static String nameUser;
     public static void greeting() {
 
         System.out.println("Welcome to the Brain Games!");
@@ -15,7 +15,8 @@ public class Cli {
         nameUser = scan.next();
         System.out.println("Hello, " + nameUser + "!");
     }
-    public String getName() {
+
+    public String getNameUser() {
         return nameUser;
     }
 }

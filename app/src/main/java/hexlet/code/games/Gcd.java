@@ -1,5 +1,5 @@
 package hexlet.code.games;
-
+import static hexlet.code.MyValues.*;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 
@@ -11,9 +11,9 @@ public class Gcd {
         System.out.println("Find the greatest common divisor of given "
                 + "numbers.");
 
-        while (correctAnswer < 3) {
-            int number1 = Engine.random(1000) + 1;
-            int number2 = Engine.random(1000) + 1;
+        while (correctAnswer < CORRECT_ANSWERS) {
+            int number1 = Engine.random(MAX_RANDOM_NUMBER_GCD) + 1;
+            int number2 = Engine.random(MAX_RANDOM_NUMBER_GCD) + 1;
             String outputNambers = number1 + " " + number2;
 
             while (number2 != 0) {

@@ -1,8 +1,9 @@
 package hexlet.code.games;
-
+import static hexlet.code.MyValues.*;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.ArrayUtils;
+
 
 public class Arprogression {
     public static void progression() {
@@ -12,13 +13,13 @@ public class Arprogression {
         Cli.greeting();
         System.out.println("What number is missing in the progression?");
 
-        while (correctAnswer < 3) {
-            int number = Engine.random(50) + 1;
-            int progressionValue = Engine.random(8) + 1;
+        while (correctAnswer < CORRECT_ANSWERS) {
+            int number = Engine.random(MAX_RANDOM_NUMBER) + 1;
+            int progressionValue = Engine.random(MIN_PROGRESSION_VALUE) + 1;
             String[] numbers = {};
 
             int i = 0;
-            while (i < progressionValue + 5) {
+            while (i < progressionValue + MIN_PROGRESSION_VALUE) {
                 number = number + progressionValue;
                 String numberStr = String.valueOf(number);
                 numbers = ArrayUtils.add(numbers, numberStr);
