@@ -1,5 +1,4 @@
 package hexlet.code;
-import static hexlet.code.MyValues.QUANTITY_GAME;
 import java.util.Scanner;
 import hexlet.code.games.Arprogression;
 import hexlet.code.games.Even;
@@ -10,9 +9,6 @@ import hexlet.code.games.PrimeN;
 
 public class App {
     public static void main(String[] args) {
-
-        String[] options = {"Exit", "Greet", "Even", "Calc", "GCD",
-                            "Progression", "PrimeN"};
 
         System.out.print("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
@@ -25,19 +21,16 @@ public class App {
                 + "Your choice: ");
 
         Scanner choice = new Scanner(System.in);
+        String number = choice.nextLine();
         try {
-            int number = choice.nextInt();
-            if (QUANTITY_GAME < number || number < 0) {
-                throw new Exception();
-            }
-            switch (options[number]) {
-                case "Exit" -> System.out.println("Goodbye!");
-                case "Greet" -> Cli.greeting();
-                case "Even" -> Even.parityCheck();
-                case "Calc" -> Calc.calculate();
-                case "GCD" -> Gcd.divisor();
-                case "Progression" -> Arprogression.progression();
-                case "PrimeN" -> PrimeN.primeNumber();
+            switch (number) {
+                case "0" -> System.out.println("Goodbye!");
+                case "1" -> Cli.greeting();
+                case "2" -> Even.parityCheck();
+                case "3" -> Calc.calculate();
+                case "4" -> Gcd.divisor();
+                case "5" -> Arprogression.progression();
+                case "6" -> PrimeN.primeNumber();
                 default -> System.out.println("Invalid number");
             }
         } catch (Exception e) {
