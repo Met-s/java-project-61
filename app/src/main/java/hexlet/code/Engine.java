@@ -77,7 +77,7 @@ public class Engine {
                 return true;
             } else {
                 System.out.printf("'%s' is wrong answer ;). "
-                                + "Correct answer was '%s'.\nLet`s try "
+                                + "Correct answer was '%s'.\nLet's try "
                                 + "again, %s!",
                         answer, number[1], userName);
                 return false;
