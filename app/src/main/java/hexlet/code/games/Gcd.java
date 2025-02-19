@@ -3,6 +3,8 @@ import static hexlet.code.MyValues.CORRECT_ANSWERS;
 import static hexlet.code.MyValues.MAX_RANDOM_NUMBER_GCD;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 
 public class Gcd {
     public static void divisor() throws Exception {
@@ -13,8 +15,8 @@ public class Gcd {
                 + "numbers.");
 
         while (correctAnswer < CORRECT_ANSWERS) {
-            int number1 = Engine.random(MAX_RANDOM_NUMBER_GCD) + 1;
-            int number2 = Engine.random(MAX_RANDOM_NUMBER_GCD) + 1;
+            int number1 = Utils.random(MAX_RANDOM_NUMBER_GCD) + 1;
+            int number2 = Utils.random(MAX_RANDOM_NUMBER_GCD) + 1;
             String outputNambers = number1 + " " + number2;
 
             while (number2 != 0) {
@@ -22,14 +24,16 @@ public class Gcd {
                 number1 = number2;
                 number2 = temp;
             }
+            String numberString = String.valueOf(number1);
+            String[] answers = {outputNambers, numberString};
 
-            if (Engine.generalLogic(outputNambers, number1)) {
+            if (Engine.generalLogic(answers)) {
                 correctAnswer++;
 
             } else {
                 break;
             }
         }
-        Engine.finall(correctAnswer);
+        Engine.endConversation(correctAnswer);
     }
 }

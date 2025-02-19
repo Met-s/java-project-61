@@ -4,13 +4,14 @@ import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
 import static hexlet.code.MyValues.MAX_RANDOM_OPERATORS;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-
+/**
+ * The user is asked to solve a mathematical expression.
+ * You need to give three correct answers in a row.
+ */
 public class Calc {
-    /**
-     * The user is asked to solve a mathematical expression.
-     * You need to give three correct answers in a row.
-     */
+
     public static void calculate() throws Exception {
 
         int result = 0;
@@ -20,9 +21,9 @@ public class Calc {
         System.out.println("What is the result of the expression?");
 
         while (correctAnswers < CORRECT_ANSWERS) {
-            int number1 = Engine.random(MAX_RANDOM_NUMBER) + 1;
-            int number2 = Engine.random(MAX_RANDOM_NUMBER) + 1;
-            int i = Engine.random(MAX_RANDOM_OPERATORS);
+            int number1 = Utils.random(MAX_RANDOM_NUMBER) + 1;
+            int number2 = Utils.random(MAX_RANDOM_NUMBER) + 1;
+            int i = Utils.random(MAX_RANDOM_OPERATORS);
             String outputResult = number1 + " " + operators[i] + " " + number2;
 
             switch (i) {
@@ -37,13 +38,15 @@ public class Calc {
                     break;
                 default :
             }
+            String resultString = String.valueOf(result);
+            String[] answers = {outputResult, resultString};
 
-            if (Engine.generalLogic(outputResult, result)) {
+            if (Engine.generalLogic(answers)) {
                 correctAnswers++;
             } else {
                 break;
             }
-            Engine.finall(correctAnswers);
+            Engine.endConversation(correctAnswers);
         }
     }
 }

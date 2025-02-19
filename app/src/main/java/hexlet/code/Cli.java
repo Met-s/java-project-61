@@ -1,11 +1,11 @@
 package hexlet.code;
 import java.util.Scanner;
 
-
+/**
+ * Getting to know the user.
+ */
 public class Cli {
-    /**
-     * Getting to know the user.
-     */
+
     private static String nameUser;
     public static void greeting() {
 

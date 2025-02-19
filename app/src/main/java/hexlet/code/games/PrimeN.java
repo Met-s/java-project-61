@@ -3,6 +3,7 @@ import static hexlet.code.MyValues.CORRECT_ANSWERS;
 import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 
 public class PrimeN {
@@ -15,7 +16,7 @@ public class PrimeN {
                 + "answer 'no'.");
 
         while (correctAnswers < CORRECT_ANSWERS) {
-            int number = Engine.random(MAX_RANDOM_NUMBER);
+            int number = Utils.random(MAX_RANDOM_NUMBER);
             String result = "yes";
             Engine.userInteraction(String.valueOf(number));
 
@@ -29,13 +30,14 @@ public class PrimeN {
                     break;
                 }
             }
+            String[] answer = {result};
 
-            if (Engine.game(result)) {
+            if (Engine.generalLogic(answer)) {
                 correctAnswers++;
             } else {
                 break;
             }
         }
-        Engine.finall(correctAnswers);
+        Engine.endConversation(correctAnswers);
     }
 }

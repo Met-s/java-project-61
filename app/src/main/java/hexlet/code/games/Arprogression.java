@@ -5,11 +5,12 @@ import static hexlet.code.MyValues.MAX_PROGRESSION_VALUE;
 import static hexlet.code.MyValues.MIN_PROGRESSION_VALUE;
 import hexlet.code.Cli;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 import org.apache.commons.lang3.ArrayUtils;
 
 
 public class Arprogression {
-    public static void progression() {
+    public static void progression() throws Exception {
 
         int correctAnswer = 0;
 
@@ -17,8 +18,8 @@ public class Arprogression {
         System.out.println("What number is missing in the progression?");
 
         while (correctAnswer < CORRECT_ANSWERS) {
-            int number = Engine.random(MAX_RANDOM_NUMBER) + 1;
-            int progressionValue = Engine.random(MAX_PROGRESSION_VALUE) + 1;
+            int number = Utils.random(MAX_RANDOM_NUMBER) + 1;
+            int progressionValue = Utils.random(MAX_PROGRESSION_VALUE) + 1;
             String[] numbers = {};
 
             int i = 0;
@@ -30,17 +31,19 @@ public class Arprogression {
             }
 
             int lengthAr = numbers.length - 2;
-            int numberIndex = Engine.random(lengthAr) + 2;
-            int numberSkipped = Integer.parseInt(numbers[numberIndex]);
+            int numberIndex = Utils.random(lengthAr) + 2;
+            String numberSkipped = numbers[numberIndex];
             numbers[numberIndex] = "..";
             String result = String.join(" ", numbers);
 
-            if (Engine.generalLogic(result, numberSkipped)) {
+            String[] answers = {result, numberSkipped};
+
+            if (Engine.generalLogic(answers)) {
                 correctAnswer++;
             } else {
                 break;
             }
         }
-        Engine.finall(correctAnswer);
+        Engine.endConversation(correctAnswer);
     }
 }
