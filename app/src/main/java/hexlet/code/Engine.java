@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -42,7 +41,7 @@ public class Engine {
                 i++;
             } else {
                 System.out.printf("'%s' is wrong answer ;). "
-                        + "Correct answer was '%s'.\nLet`s try "
+                        + "Correct answer was '%s'.\nLet's try "
                         + "again, %s!", answer, num1, userName);
                 scan.close();
                 break;
