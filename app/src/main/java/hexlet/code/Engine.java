@@ -1,5 +1,7 @@
 package hexlet.code;
+
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -10,94 +12,44 @@ import java.util.Scanner;
  */
 public class Engine {
 
-    private static String answer;
-    /**
-     * User interaction.
-     * @param number
-     */
-    public static void userInteraction(String number) {
-
-        System.out.println("Question: " + number);
-        System.out.print("Your answer: ");
-        Scanner scan1 = new Scanner(System.in);
-        answer = scan1.next();
-    }
-
     /**
      * Logic common to all games.
      * -
-     * String[] is accepted as input.
-     * Depending on the number of elements in the array, the event handling
-     * option is selected.
-     * @param number
-     * Option with one element: boolean value with options "yes" and "no" .
-     * Option with two elements: implies solving some expression.
-     *
-     * @return Default value
-     * @throws Exception Exception: entering an invalid value
+     * String[][] is accepted as input.
+     * @param number - String[number of questions][question to the user,
+     *                correct answer]
+     * @param gameCondition - message about the rules of the game.
      */
 
-    public static boolean generalLogic(String[] number) throws Exception {
-        int length = number.length;
+    public static void generalLogic(String[][] number, String gameCondition) {
+
+        Cli.greeting();
+        System.out.println(gameCondition);
         String userName = Cli.getNameUser();
+        String answer;
 
-        if (length == 1) {
-            if ((!answer.equals("no")) & (!answer.equals("yes"))) {
-                throw new Exception();
-            }
-            if (number[0].equals("yes")) {
-                if (answer.equals("yes")) {
-                    System.out.println("Correct!");
-                    return true;
-                } else {
-                    System.out.println("'no' is wrong answer ;(. Correct "
-                            + "answer was 'yes'.\nLet's try again, "
-                            + userName + "!");
-                    return false;
-                }
-            }
-            if (number[0].equals("no")) {
-                if (answer.equals("no")) {
-                    System.out.println("Correct!");
-                    return true;
-                } else {
-                    System.out.println("'yes' is wrong answer ;(. Correct"
-                            + " answer was 'no'.\nLet's try again, "
-                            + userName + "!");
-                    return false;
-                }
-            }
+        int i = 0;
+        while (i < CORRECT_ANSWERS) {
+            String exemp = number[i][0];
+            String num1 = number[i][1];
+            System.out.printf("Question: %s\nYour answer: ", exemp);
+            Scanner scan = new Scanner(System.in);
+            answer = scan.next();
 
-        }
-        if (length == 2) {
-            userInteraction(number[0]);
-
-            if (number[1].equals(answer)) {
+            if (answer.equals(num1)) {
                 System.out.println("Correct!");
-                return true;
+                System.out.println(userName);
+                i++;
             } else {
                 System.out.printf("'%s' is wrong answer ;). "
-                                + "Correct answer was '%s'.\nLet's try "
-                                + "again, %s!",
-                        answer, number[1], userName);
-                return false;
+                        + "Correct answer was '%s'.\nLet`s try "
+                        + "again, %s!", answer, num1, userName);
+                scan.close();
+                break;
             }
         }
-        return false;
-    }
-
-
-    /**
-     * Displays the final message about successful completion of the game.
-     * @param correctAnswers
-     */
-
-    public static void endConversation(int correctAnswers) {
-
-        String nameUser = Cli.getNameUser();
-
-        if (correctAnswers == CORRECT_ANSWERS) {
-            System.out.println("Congratulations, " + nameUser + "!");
+        if (i == CORRECT_ANSWERS) {
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
