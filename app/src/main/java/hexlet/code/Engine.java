@@ -39,7 +39,6 @@ public class Engine {
 
             if (answer.equals(num1)) {
                 System.out.println("Correct!");
-                System.out.println(userName);
                 i++;
             } else {
                 System.out.printf("'%s' is wrong answer ;). "
