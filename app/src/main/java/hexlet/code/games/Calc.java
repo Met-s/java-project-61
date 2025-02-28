@@ -13,7 +13,7 @@ import hexlet.code.Utils;
 public class Calc {
     public static void calculate() {
 
-        String gameCondition = "";
+        String gameCondition = "What is the result of the expression?";
         int result = 0;
         int correctAnswers = 0;
         String[] operators = {"+", "-", "*"};
