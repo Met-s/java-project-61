@@ -1,7 +1,7 @@
 package hexlet.code.games;
+
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
 import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
@@ -20,27 +20,17 @@ public class Even {
     public static void parityCheck() throws Exception {
 
         int correctAnswers = 0;
-
-        Cli.greeting();
-
-        System.out.println("Answer 'yes' if the number is even, "
-                + "otherwise answer 'no'.");
+        String[][] example = new String[CORRECT_ANSWERS][2];
+        String gameCondition = "Answer 'yes' if the number is even, "
+                + "otherwise answer 'no'.";
 
         while (correctAnswers < CORRECT_ANSWERS) {
             int number = Utils.random(MAX_RANDOM_NUMBER);
-
-            Engine.userInteraction(String.valueOf(number));
-
             String result = (number % 2 == 0) ? "yes" : "no";
-
-            String[] answer = {result};
-
-            if (Engine.generalLogic(answer)) {
-                correctAnswers++;
-            } else {
-                break;
-            }
+            example[correctAnswers] =
+                    new String[] {String.valueOf(number), result};
+            correctAnswers++;
         }
-        Engine.endConversation(correctAnswers);
+        Engine.generalLogic(example, gameCondition);
     }
 }
