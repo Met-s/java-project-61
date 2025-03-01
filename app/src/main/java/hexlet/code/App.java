@@ -6,11 +6,11 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
 import hexlet.code.games.PrimeN;
-import static hexlet.code.CustomException.doSomething;
+//import static hexlet.code.CustomException.doSomething;
 
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         System.out.print("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
@@ -35,10 +35,10 @@ public class App {
             case "6" -> PrimeN.primeNumber();
             default -> System.out.println("Invalid number");
         }
-        try {
-            doSomething(number);
-        } catch (CustomException e) {
-            System.out.println(("Error: " + e.getMessage()));
-        }
+//        try {
+//            doSomething(number);
+//        } catch (CustomException e) {
+//            System.out.println(("Error: " + e.getMessage()));
+//        }
     }
 }

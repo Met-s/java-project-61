@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import static hexlet.code.CustomException.validateInput;
+//import static hexlet.code.CustomException.validateInput;
 
 /**
  * Getting to know the user.
@@ -17,11 +17,11 @@ public class Cli {
         nameUser = scan.nextLine();
         System.out.println("Hello, " + nameUser + "!");
 
-        try {
-            validateInput(nameUser);
-        } catch (CustomException e) {
-            System.out.println(("Error: " + e.getMessage()));
-        }
+//        try {
+//            validateInput(nameUser);
+//        } catch (CustomException e) {
+//            System.out.println(("Error: " + e.getMessage()));
+//        }
     }
 
     public static String getNameUser() {

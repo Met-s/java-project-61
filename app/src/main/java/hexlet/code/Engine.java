@@ -1,6 +1,8 @@
 package hexlet.code;
 
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -26,6 +28,7 @@ public class Engine {
         System.out.println(gameCondition);
         String userName = Cli.getNameUser();
         String answer;
+//        System.out.println("S = " + Arrays.deepToString(number));
 
         int i = 0;
         while (i < CORRECT_ANSWERS) {

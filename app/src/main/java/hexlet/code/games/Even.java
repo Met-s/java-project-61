@@ -17,7 +17,7 @@ import hexlet.code.Utils;
  */
 public class Even {
 
-    public static void parityCheck() throws Exception {
+    public static void parityCheck() {
 
         int correctAnswers = 0;
         String[][] example = new String[CORRECT_ANSWERS][2];

@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.CustomException;
+//import hexlet.code.CustomException;
 import hexlet.code.Utils;
 import org.apache.commons.lang3.ArrayUtils;
 import hexlet.code.Engine;
@@ -11,7 +11,7 @@ import static hexlet.code.MyValues.MIN_PROGRESSION_VALUE;
 
 
 public class Arprogression {
-    public static void progression() throws CustomException {
+    public static void progression() {
 
         int correctAnswer = 0;
         String gameCondition = "What number is missing in the progression?";
