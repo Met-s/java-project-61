@@ -42,7 +42,7 @@ public class Engine {
                 System.out.printf("'%s' is wrong answer ;). "
                         + "Correct answer was '%s'.\nLet's try "
                         + "again, %s!", answer, num1, userName);
-                scan.close();
+
                 break;
             }
         }
