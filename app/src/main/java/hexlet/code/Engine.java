@@ -1,8 +1,6 @@
 package hexlet.code;
 
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
