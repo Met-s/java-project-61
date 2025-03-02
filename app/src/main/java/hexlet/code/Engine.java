@@ -2,7 +2,7 @@ package hexlet.code;
 
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 /**
@@ -53,4 +53,59 @@ public class Engine {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
+
+//    public static boolean game(String result) throws Exception {
+//
+//
+//        String nameUser = Cli.getNameUser();
+//        if (length == 1) {
+//            if ((!answer.equals("no")) & (!answer.equals("yes"))) {
+//                throw new Exception();
+//            }
+
+//
+
+//            if (length == 2) {
+//                userInteraction(number[0]);
+//
+//                if (result.equals("yes")) {
+//                    if (answer.equals("yes")) {
+//                        System.out.println("Correct!");
+//                        return true;
+//
+//                    } else {
+//                        System.out.println("'no' is wrong answer ;(. Correct "
+//                                + "answer was 'yes'.\nLet's try again, "
+//                                + nameUser + "!");
+//                        return false;
+//
+//                    }
+//                }
+//                if (result.equals("no")) {
+//                    if (answer.equals("no")) {
+//                        if (number[1].equals(answer)) {
+//                            System.out.println("Correct!");
+//                            return true;
+//
+//                        } else {
+//                            System.out.println("'yes' is wrong answer ;(. Correct"
+//                                    + " answer was 'no'.\nLet's try again, "
+//                                    + nameUser + "!");
+//                            System.out.printf("'%s' is wrong answer ;). "
+//                                            + "Correct answer was '%s'.\nLet`s try "
+//                                            + "again, %s!",
+//                                    answer, number[1], userName);
+//                            return false;
+//                        }
+//                    }
+//                    return false;
+//                }
+//            }
+
+//    public static void finall(int correctAnswers) {
+//                    if (correctAnswers == 3) {
+//                        System.out.println("Congratulations, " + nameUser + "!");
+//                    }
+//                }
+
 }
