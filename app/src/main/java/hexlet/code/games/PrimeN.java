@@ -3,8 +3,8 @@ package hexlet.code.games;
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
 import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
 
-import hexlet.code.Cli;
 
+import hexlet.code.Cli;
 import hexlet.code.Utils;
 
 
@@ -15,7 +15,7 @@ public class PrimeN {
     public static void primeNumber() {
 
         int correctAnswers = 0;
-        String result = "";
+
         String gameCondition = "Answer 'yes' if given number is prime. Otherwise "
                 + "answer 'no'.";
         Cli.greeting();
@@ -25,6 +25,8 @@ public class PrimeN {
 
         while (correctAnswers < CORRECT_ANSWERS) {
             int number = Utils.random(MAX_RANDOM_NUMBER);
+            String result = "yes";
+
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             Scanner scan1 = new Scanner(System.in);
@@ -36,8 +38,6 @@ public class PrimeN {
             for (int i = 2; i <= number / 2; i++) {
                 if (number % i == 0) {
                     result = "no";
-                } else {
-                    result = "yes";
                 }
             }
 
@@ -69,13 +69,6 @@ public class PrimeN {
                 System.out.println("Congratulations, " + userName + "!");
 
             }
-
         }
-//        Engine.finall(correctAnswers);
-
-
-
-
-
     }
 }
