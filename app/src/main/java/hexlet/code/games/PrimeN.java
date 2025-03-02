@@ -67,7 +67,7 @@ public class PrimeN {
 
             if (correctAnswers == CORRECT_ANSWERS) {
                 System.out.println("Congratulations, " + userName + "!");
-                break;
+
             }
 
         }
