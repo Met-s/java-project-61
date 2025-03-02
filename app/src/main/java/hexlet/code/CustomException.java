@@ -8,6 +8,8 @@ public class CustomException extends Exception {
     }
 
     public static void doSomething(String value) throws CustomException {
+        int minGame = 0;
+        int maxGame = 6;
 
         try {
             parseInt(value);
@@ -18,7 +20,7 @@ public class CustomException extends Exception {
 
         int value1 = parseInt(value);
 
-        if (value1 < 0 || value1 > 6) {
+        if (value1 < minGame || value1 > maxGame) {
             throw new CustomException("Value must be between 0 and 6!");
         }
     }
