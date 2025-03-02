@@ -40,7 +40,7 @@ public class PrimeN {
                     result = "yes";
                 }
             }
-            System.out.println("R : " + result);
+
 
             if (result.equals("yes")) {
                 if (answer.equals("yes")) {
