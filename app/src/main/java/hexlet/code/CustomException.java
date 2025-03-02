@@ -2,6 +2,7 @@ package hexlet.code;
 
 import static java.lang.Integer.parseInt;
 
+
 public class CustomException extends Exception {
     public CustomException(String message) {
         super(message);
