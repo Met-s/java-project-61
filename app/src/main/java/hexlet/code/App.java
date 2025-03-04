@@ -10,7 +10,10 @@ import hexlet.code.games.PrimeN;
 
 public class App {
 
-    public static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+    public static Scanner getScanner() {
+        return scanner;
+    }
     public static void main(String[] args) {
 
         System.out.print("Please enter the game number and press Enter.\n"

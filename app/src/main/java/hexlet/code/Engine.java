@@ -29,7 +29,7 @@ public class Engine {
             String exemp = number[i][0];
             String num1 = number[i][1];
             System.out.printf("Question: %s\nYour answer: ", exemp);
-            answer = App.scanner.next();
+            answer = App.getScanner().next();
 
             if (answer.equals(num1)) {
                 System.out.println("Correct!");
