@@ -6,10 +6,11 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Gcd;
 import hexlet.code.games.PrimeN;
-//import static hexlet.code.CustomException.doSomething;
 
 
 public class App {
+
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         System.out.print("Please enter the game number and press Enter.\n"
@@ -22,23 +23,22 @@ public class App {
                 + "0 - Exit\n"
                 + "Your choice: ");
 
-        Scanner choice = new Scanner(System.in);
-        String number = choice.nextLine();
-
-        switch (number) {
-            case "0" -> System.out.println("Goodbye!");
-            case "1" -> Cli.greeting();
-            case "2" -> Even.parityCheck();
-            case "3" -> Calc.calculate();
-            case "4" -> Gcd.divisor();
-            case "5" -> Arprogression.progression();
-            case "6" -> PrimeN.primeNumber();
-            default -> System.out.println("Invalid number");
+        String number = scanner.nextLine();
+        try {
+            switch (number) {
+                case "0" -> System.out.println("Goodbye!");
+                case "1" -> Cli.greeting();
+                case "2" -> Even.parityCheck();
+                case "3" -> Calc.calculate();
+                case "4" -> Gcd.divisor();
+                case "5" -> Arprogression.progression();
+                case "6" -> PrimeN.primeNumber();
+                default -> throw new CustomException("Error: Invalid value "
+                        + "entered!\nValue must be between 0 and 6!");
+            }
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
         }
-//        try {
-//            doSomething(number);
-//        } catch (CustomException e) {
-//            System.out.println(("Error: " + e.getMessage()));
-//        }
+        scanner.close();
     }
 }

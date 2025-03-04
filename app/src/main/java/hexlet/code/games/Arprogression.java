@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-//import hexlet.code.CustomException;
 import hexlet.code.Utils;
 import org.apache.commons.lang3.ArrayUtils;
 import hexlet.code.Engine;

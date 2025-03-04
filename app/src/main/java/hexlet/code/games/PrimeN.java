@@ -12,10 +12,8 @@ public class PrimeN {
 
         int correctAnswers = 0;
         String[][] example = new String[CORRECT_ANSWERS][2];
-//        String result = "";
         String gameCondition = "Answer 'yes' if given number is prime. "
                                                   + "Otherwise answer 'no'.";
-
 
         while (correctAnswers < CORRECT_ANSWERS) {
             int number = Utils.random(MAX_RANDOM_NUMBER);
@@ -32,7 +30,6 @@ public class PrimeN {
             example[correctAnswers] = new String[]{String.valueOf(number),
                                                       result};
             correctAnswers++;
-
         }
         Engine.generalLogic(example, gameCondition);
     }

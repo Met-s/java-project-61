@@ -2,9 +2,6 @@ package hexlet.code;
 
 import static hexlet.code.MyValues.CORRECT_ANSWERS;
 
-
-import java.util.Scanner;
-
 /**
  * General methods used in the application.
  * User interaction
@@ -12,7 +9,6 @@ import java.util.Scanner;
  * Displays the final message about successful completion of the game
  */
 public class Engine {
-
     /**
      * Logic common to all games.
      * -
@@ -21,22 +17,19 @@ public class Engine {
      *                correct answer]
      * @param gameCondition - message about the rules of the game.
      */
-
     public static void generalLogic(String[][] number, String gameCondition) {
 
         Cli.greeting();
         System.out.println(gameCondition);
         String userName = Cli.getNameUser();
         String answer;
-//        System.out.println("S = " + Arrays.deepToString(number));
 
         int i = 0;
         while (i < CORRECT_ANSWERS) {
             String exemp = number[i][0];
             String num1 = number[i][1];
             System.out.printf("Question: %s\nYour answer: ", exemp);
-            Scanner scan = new Scanner(System.in);
-            answer = scan.next();
+            answer = App.scanner.next();
 
             if (answer.equals(num1)) {
                 System.out.println("Correct!");
@@ -45,7 +38,6 @@ public class Engine {
                 System.out.printf("'%s' is wrong answer ;). "
                         + "Correct answer was '%s'.\nLet's try "
                         + "again, %s!", answer, num1, userName);
-                scan.close();
                 break;
             }
         }

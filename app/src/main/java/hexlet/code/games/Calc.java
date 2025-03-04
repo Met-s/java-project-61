@@ -5,7 +5,6 @@ import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
 import static hexlet.code.MyValues.MAX_RANDOM_OPERATORS;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
 /**
  * The user is asked to solve a mathematical expression.
  * You need to give three correct answers in a row.
