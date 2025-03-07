@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import static hexlet.code.MyValues.CORRECT_ANSWERS;
-import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
+import static hexlet.code.Constants.CORRECT_ANSWERS;
+import static hexlet.code.Constants.MAX_RANDOM_NUMBER;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 

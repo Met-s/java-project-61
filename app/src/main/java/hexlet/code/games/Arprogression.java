@@ -3,10 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 import org.apache.commons.lang3.ArrayUtils;
 import hexlet.code.Engine;
-import static hexlet.code.MyValues.CORRECT_ANSWERS;
-import static hexlet.code.MyValues.MAX_RANDOM_NUMBER;
-import static hexlet.code.MyValues.MAX_PROGRESSION_VALUE;
-import static hexlet.code.MyValues.MIN_PROGRESSION_VALUE;
+import static hexlet.code.Constants.CORRECT_ANSWERS;
+import static hexlet.code.Constants.MAX_RANDOM_NUMBER;
+import static hexlet.code.Constants.MAX_PROGRESSION_VALUE;
+import static hexlet.code.Constants.MIN_PROGRESSION_VALUE;
 
 
 public class Arprogression {

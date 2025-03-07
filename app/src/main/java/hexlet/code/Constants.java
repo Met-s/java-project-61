@@ -1,6 +1,6 @@
 package hexlet.code;
 
-public final class MyValues {
+public final class Constants {
 
     public static final int CORRECT_ANSWERS = 3;
     public static final int MAX_RANDOM_NUMBER = 50;

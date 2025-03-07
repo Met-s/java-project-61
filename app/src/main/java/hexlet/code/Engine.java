@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import static hexlet.code.MyValues.CORRECT_ANSWERS;
+import static hexlet.code.Constants.CORRECT_ANSWERS;
 
 /**
  * General methods used in the application.

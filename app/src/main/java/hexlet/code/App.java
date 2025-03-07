@@ -36,10 +36,10 @@ public class App {
                 case "4" -> Gcd.divisor();
                 case "5" -> Arprogression.progression();
                 case "6" -> PrimeN.primeNumber();
-                default -> throw new CustomException("Error: Invalid value "
+                default -> throw new InvalidRequestNumberException("Error: Invalid value "
                         + "entered!\nValue must be between 0 and 6!");
             }
-        } catch (CustomException e) {
+        } catch (InvalidRequestNumberException e) {
             System.out.println(e.getMessage());
         }
         scanner.close();
